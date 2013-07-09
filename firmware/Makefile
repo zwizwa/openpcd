@@ -350,13 +350,16 @@ LPC21ISP_CONTROL = -control
 ## DIRAVRUTILS = $(DIRAVR)/utils/bin/
 
 # Define programs and commands.
+#TPFX=arm-elf-
+TPFX=arm-none-eabi-
 SHELL = sh
-CC = arm-elf-gcc
-CPP = arm-elf-g++
-OBJCOPY = arm-elf-objcopy
-OBJDUMP = arm-elf-objdump
-SIZE = arm-elf-size
-NM = arm-elf-nm
+CC = $(TPFX)gcc
+CPP = $(TPFX)g++
+OBJCOPY = $(TPFX)objcopy
+OBJDUMP = $(TPFX)objdump
+SIZE = $(TPFX)size
+NM = $(TPFX)nm
+
 REMOVE = rm -f
 COPY = cp
 
